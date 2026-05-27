@@ -86,3 +86,24 @@ Nhập lựa chọn của bạn (1-5):
 
                     
 
+# Input:
+# lựa chọn menu: string 1 đến 5
+# chức năng 2: Mã SP (str), Tên SP (str), Số lượng (int), Đơn giá (int)
+# chức năng 3: Mã SP (str), Số lượng mới (int)
+# chức năng 4: Mã SP (str)
+
+# output:
+
+# Bảng hiển thị giỏ hàng
+# tổng số lượng & Tổng thanh toán
+# thông báo kết quả thao tác
+
+# dữ liệu lưu trữ: cart_items = list[list]
+
+# ddề xuất giải pháp
+
+# sử dụng 1 vòng lặp while True quản lý menu.
+# dùng list chứa list để lưu giỏ hàng.
+# tìm sản phẩm bằng vòng lặp for.
+# xóa dùng pop(i).
+# hiển thị bảng đơn giản bằng f-string.
