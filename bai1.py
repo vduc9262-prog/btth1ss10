@@ -1,36 +1,5 @@
 
 
-# while True:
-#     choice = int(input("""
-# ==================================================
-#           SHOPEE CART MANAGEMENT SYSTEM
-# ==================================================
-# 1. Xem chi tiết giỏ hàng & Tính tổng tiền
-# 2. Thêm sản phẩm mới / Cộng dồn số lượng
-# 3. Cập nhật số lượng của một sản phẩm
-# 4. Xóa sản phẩm khỏi giỏ hàng
-# 5. Thoát chương trình
-# ==================================================
-# Mời bạn chọn chức năng (1-5):
-# """))
-#     print()
-
-#     cart_items = [
-#             ["P001", "Dien thoai iPhone 15", 1, 13000000],
-#             ["P002", "Op lung Silicon", 2, 150000]
-#     ]
-#     sum_items = 0
-#     if choice == 1:
-#                 print("--chi tiết giỏ hàng--")
-#                 print(f"STT | MÃ SP | {'TÊN SẢN PHẨM' :>10} | SL | {'ĐƠN GIÁ' :>10}  | THÀNH TIỀN ") 
-#                 print('-' * 40)
-#                 for i,cart in enumerate(cart_items,1):
-#                     print(f'{i} | {cart[0]:>5} | {cart[1]:>5} | {cart[2]:>5} |{cart[3]:>5} | {f'{cart[3] * cart[2]} '}  ')
-                
-#                 sum_items += cart[2]
-                    
-#                 print(f'tổng số lượng sản phẩm :{sum_items}')
-
 
 while True:
     choice = input("""
