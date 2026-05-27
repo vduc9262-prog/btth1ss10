@@ -1,6 +1,4 @@
 
-
-
 while True:
     choice = input("""
 ===== HỆ THỐNG QUẢN LÝ GIỎ HÀNG =====
@@ -13,36 +11,30 @@ while True:
 Nhập lựa chọn của bạn (1-5): 
 """)
 
-    # Khởi tạo giỏ hàng lần đầu
-    if 'cart_items' not in globals():
-        cart_items = [
-            ["P001", "Dien thoai iPhone 15", 1, 25000000],
-            ["P002", "Op lung Silicon", 2, 150000]
-        ]
 
+    cart_items = [
+            ["P001", "Dien thoai iPhone 15", 1, 13000000],
+            ["P002", "Op lung Silicon", 2, 150000]
+    ]
+    sum_items = 0
     if choice == "1":
-        print("\n-- DANH SÁCH SẢN PHẨM TRONG GIỎ HÀNG --")
-        if not cart_items:
-            print("Giỏ hàng hiện đang trống.")
-        else:
-            print("="*80)
-            print(f"{'STT':<4} {'Mã SP':<8} {'Tên Sản Phẩm':<30} {'Số Lượng':<10} {'Đơn Giá':<15} {'Thành Tiền':<15}")
-            print("="*80)
+        print("\n-- CHI TIẾT GIỎ HÀNG --")
+        print(f"STT | MÃ SP | {'TÊN SẢN PHẨM':<20} | SL | {'ĐƠN GIÁ':>12} | THÀNH TIỀN")
+        print('-' * 70)
+        
+        total_quantity = 0   
+        total_amount = 0 
+        
+        for i, cart in enumerate(cart_items, 1):
+            subtotal = cart[2] * cart[3]
+            total_quantity += cart[2]
+            total_amount += subtotal
             
-            total_qty = 0
-            total_money = 0
+            print(f"{i:<3} | {cart[0]:<6} | {cart[1]:<20} | {cart[2]:>3} | {cart[3]:>12,} | {subtotal:>12,}")
+        print(f"Tổng số lượng: {total_quantity} sản phẩm")
+        print(f"Tổng thanh toán: {total_amount:,} VNĐ")
+         
             
-            for i, item in enumerate(cart_items, 1):
-                code, name, qty, price = item
-                subtotal = qty * price
-                total_qty += qty
-                total_money += subtotal
-                print(f"{i:<4} {code:<8} {name[:28]:<30} {qty:<10} {price:>12,}đ {subtotal:>13,}đ")
-            
-            print("="*80)
-            print(f"Tổng số lượng: {total_qty} sản phẩm")
-            print(f"Tổng tiền: {total_money:,} VNĐ")
-            print("="*80)
 
     elif choice == "2":
         code = input("Nhập mã sản phẩm: ").strip().upper()
