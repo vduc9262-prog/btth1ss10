@@ -88,9 +88,9 @@ Nhập lựa chọn của bạn (1-5):
 
 # Input:
 # lựa chọn menu: string 1 đến 5
-# chức năng 2: Mã SP (str), Tên SP (str), Số lượng (int), Đơn giá (int)
-# chức năng 3: Mã SP (str), Số lượng mới (int)
-# chức năng 4: Mã SP (str)
+# chức năng 2: Mã SP str, Tên SP str, Số lượng int, Đơn giá int
+# chức năng 3: Mã SP str, Số lượng mới int
+# chức năng 4: Mã SP str
 
 # output:
 
